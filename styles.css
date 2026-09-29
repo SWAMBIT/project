@@ -224,6 +224,7 @@ img { max-width: 100%; display: block; }
 .nthumb-release img { object-fit: contain; }
 .nthumb-meeting img { object-position: 42% 30%; }
 .nthumb-talk { background: linear-gradient(160deg, #0a66c2, #06356b); }
+.nthumb-embed { position: absolute; top: 0; left: 0; width: 504px; height: 628px; border: 0; background: #fff; transform-origin: 0 0; transform: scale(0.357); pointer-events: none; }
 .nthumb-txt { font-family: "Sora", sans-serif; font-weight: 700; font-size: 2.6rem; color: #fff; }
 .nthumb-launch { background: radial-gradient(circle at 50% 50%, rgba(46, 230, 200, 0.16), #080b38 78%); }
 .nthumb-launch img { width: auto; height: 136px; object-fit: contain; filter: drop-shadow(0 0 14px rgba(26, 86, 236, 0.6)); }
@@ -326,6 +327,7 @@ img { max-width: 100%; display: block; }
     .nface p { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     .nthumb { width: 92px; height: 92px; margin-top: 0; }
     .nthumb-launch img { height: 82px; }
+    .nthumb-embed { display: none; }
     .nthumb-release img { object-fit: cover; object-position: 8% center; }
     .hand-hint { display: block; }
     .hint-m { display: inline; }
