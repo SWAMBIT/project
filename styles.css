@@ -222,7 +222,7 @@ img { max-width: 100%; display: block; }
 .nthumb-poster img { object-position: top center; }
 .nthumb-release { background: #fff; }
 .nthumb-release img { object-fit: contain; }
-.nthumb-meeting img { object-position: 50% 30%; transform: scale(1.7); transform-origin: 52% 36%; }
+.nthumb-meeting img { object-position: 50% 30%; transform: scale(1.3); transform-origin: 50% 40%; }
 .nthumb-talk { background: linear-gradient(160deg, #0a66c2, #06356b); }
 .nthumb-embed { position: absolute; top: 0; left: 0; width: 504px; height: 628px; border: 0; background: #fff; transform-origin: 0 0; transform: scale(0.357); pointer-events: none; }
 .nthumb-txt { font-family: "Sora", sans-serif; font-weight: 700; font-size: 2.6rem; color: #fff; }
@@ -343,6 +343,7 @@ img { max-width: 100%; display: block; }
     .hand .pcard { width: auto; margin-left: 0; transform: none !important; }
     .hand .pcard:only-child { grid-column: 1 / -1; width: calc(50% - 7px); justify-self: center; }
     .pcard-photo { aspect-ratio: 1 / 1; }
+    .pcard-photo img { object-position: center 0%; }
     .pcard-name { font-size: 0.86rem; }
     .pcard-role { font-size: 0.74rem; }
 }
