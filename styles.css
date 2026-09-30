@@ -222,14 +222,13 @@ img { max-width: 100%; display: block; }
 .nthumb-poster img { object-position: top center; }
 .nthumb-release { background: #fff; }
 .nthumb-release img { object-fit: contain; }
-.nthumb-meeting img { object-position: 42% 30%; }
+.nthumb-meeting img { object-position: 50% 30%; transform: scale(1.7); transform-origin: 52% 36%; }
 .nthumb-talk { background: linear-gradient(160deg, #0a66c2, #06356b); }
 .nthumb-embed { position: absolute; top: 0; left: 0; width: 504px; height: 628px; border: 0; background: #fff; transform-origin: 0 0; transform: scale(0.357); pointer-events: none; }
 .nthumb-txt { font-family: "Sora", sans-serif; font-weight: 700; font-size: 2.6rem; color: #fff; }
 .nthumb-launch { background: radial-gradient(circle at 50% 50%, rgba(46, 230, 200, 0.16), #080b38 78%); }
 .nthumb-launch img { width: auto; height: 136px; object-fit: contain; filter: drop-shadow(0 0 14px rgba(26, 86, 236, 0.6)); }
 .ncard-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-.hand-hint { display: none; margin: 10px 0 0; text-align: center; font-size: 0.85rem; color: var(--muted); }
 .news-details { display: none; }
 
 /* playing-card corner index (date) */
@@ -315,7 +314,6 @@ img { max-width: 100%; display: block; }
 }
 
 /* news on small screens: compact tappable cards, stacked, instead of the overlapping hand */
-.hint-m { display: none; }
 @media (max-width: 900px) {
     .news-hand { height: auto; display: flex; flex-direction: column; gap: 12px; margin-top: 0; }
     .ncard { position: relative; top: auto; left: auto; width: auto; height: auto; transform: none; grid-template-columns: 8px 1fr; }
@@ -329,8 +327,6 @@ img { max-width: 100%; display: block; }
     .nthumb-launch img { height: 82px; }
     .nthumb-embed { display: none; }
     .nthumb-release img { object-fit: cover; object-position: 8% center; }
-    .hand-hint { display: block; }
-    .hint-m { display: inline; }
 }
 
 @media (max-width: 820px) {
