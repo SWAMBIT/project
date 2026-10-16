@@ -188,15 +188,16 @@ img { max-width: 100%; display: block; }
 /* news: a hand of cards, newest on top at the left */
 .section-news .section-title { margin-bottom: 12px; }
 .section-news { padding-top: 24px; padding-bottom: 56px; }
-.news-hand { --w: 252px; --h: 392px; position: relative; height: calc(var(--h) + 64px); margin-top: 6px; }
+.news-hand { --n: 6; --w: 252px; --h: 392px; position: relative; height: calc(var(--h) + 64px); margin-top: 6px; }
+@media (min-width: 1160px) { .news-hand { margin-inline: -40px; } }
 .ncard {
     position: absolute; top: 40px; width: var(--w); height: var(--h);
-    left: calc((100% - var(--w)) / 4 * var(--i)); z-index: calc(10 - var(--i));
+    left: calc((100% - var(--w)) / (var(--n) - 1) * var(--i)); z-index: calc(10 - var(--i));
     display: grid; grid-template-columns: 44px 1fr; overflow: hidden; cursor: pointer; outline: none;
     border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.10);
     background: radial-gradient(ellipse 80% 50% at 100% 0%, rgba(26, 86, 236, 0.22), transparent 70%), linear-gradient(165deg, #10175a, #080b38);
     box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
-    transform: rotate(calc((var(--i) - 2) * 1.6deg)); transform-origin: 50% 100%;
+    transform: rotate(calc((var(--i) - (var(--n) - 1) / 2) * 1.3deg)); transform-origin: 50% 100%;
     transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s;
 }
 .ncard:hover, .ncard:focus-visible {
@@ -222,6 +223,7 @@ img { max-width: 100%; display: block; }
 .nthumb-poster img { object-position: top center; }
 .nthumb-release { background: #fff; }
 .nthumb-release img { object-fit: contain; }
+.nthumb-aigrid img { object-position: 60% 30%; }
 .nthumb-meeting img { object-position: 50% 30%; transform: scale(1.3); transform-origin: 50% 40%; }
 .nthumb-talk { background: linear-gradient(160deg, #0a66c2, #06356b); }
 .nthumb-embed { position: absolute; top: 0; left: 0; width: 504px; height: 628px; border: 0; background: #fff; transform-origin: 0 0; transform: scale(0.357); pointer-events: none; }
@@ -278,6 +280,11 @@ img { max-width: 100%; display: block; }
 .poster-link img { width: min(280px, 70%); border-radius: 8px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5); transition: transform 0.2s; }
 .poster-link:hover { text-decoration: none; color: var(--text); }
 .poster-link:hover img { transform: translateY(-4px); }
+.credit-fig { position: relative; margin: 0; line-height: 0; }
+.credit-fig figcaption {
+    position: absolute; left: 10px; bottom: 10px; padding: 3px 8px; border-radius: 6px; line-height: 1.3;
+    font-size: 0.7rem; color: rgba(255, 255, 255, 0.92); background: rgba(8, 11, 56, 0.62); backdrop-filter: blur(4px);
+}
 .team-photo { width: 100%; max-height: 420px; object-fit: cover; object-position: center 30%; border-radius: 12px; }
 .launch-mark { width: auto; height: 110px; align-self: flex-start; filter: drop-shadow(0 0 18px rgba(26, 86, 236, 0.4)); }
 .embed { width: 100%; max-width: 504px; margin: 6px auto 0; border-radius: 12px; overflow: hidden; background: #fff; }
